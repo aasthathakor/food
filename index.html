@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <input type="text" id="inputtext" placeholder="Enter a value">
+    <button onclick="addRecord()">Add to Array</button>
+    <p id="values"></p>
+    
+    <script>
+       
+        let arr = [];
+    
+        
+        function addRecord() {
+            const inputElement = document.getElementById('inputtext');
+            const inputValue = inputElement.value;
+            
+            arr.push(inputValue);
+               
+            inputElement.value = '';
+    
+            display();
+        }
+    
+        function display() {
+            const resultElement = document.getElementById('values');
+            resultElement.innerHTML = 'Array values: ' + arr.join(', ');
+        }
+    </script>
+</body>
+</html>
+
+
+
+</body>
+</html>
